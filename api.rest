@@ -1,0 +1,33 @@
+
+GET http://localhost:8000/
+
+###
+GET http://localhost:8000/health
+
+###
+POST http://localhost:8000/chat
+Content-Type: application/json
+
+{
+    "message":"Hi, my model",
+    "model":"phi"
+}
+
+###
+GET http://localhost:8000/users
+###
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "email":"asim@gmails.com",
+    "password":"asim@123"
+}
+
+###
+POST http://localhost:8000/conversations
+Content-Type: application/json
+
+{
+    "title":"other one"
+}
