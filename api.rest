@@ -29,5 +29,41 @@ POST http://localhost:8000/conversations
 Content-Type: application/json
 
 {
-    "title":"other one"
+    "title":"conversation 1"
 }
+
+###
+GET http://localhost:8000/conversations
+
+
+###
+PUT http://localhost:8000/conversations/1
+Content-Type: application/json
+
+{
+    "title":"updated one1"
+}
+
+###
+PATCH http://localhost:8000/conversations/1
+Content-Type: application/json
+
+{
+    "messages": [
+        {
+        "role": "user",
+        "content": "What is Python?"
+        },
+        {
+        "role": "assistant",
+        "content": "Python is a programming language."
+        },
+        {
+        "role": "user",
+        "content": "What is FastAPI?"
+        }
+    ]
+}
+
+###
+DELETE http://localhost:8000/conversations/2
